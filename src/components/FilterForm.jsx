@@ -27,7 +27,7 @@ function FilterForm() {
   };
 
   return (
-    <section className="flex space-x-10">
+    <section className="flex space-x-10 justify-center mt-10">
       <input
         type="text"
         onChange={ (ev) => changeByNameFilter(ev) }
@@ -85,6 +85,7 @@ function FilterForm() {
       />
       <button
         onClick={ () => addComparisonFilter(filter) }
+        disabled={ !optionColumns.length > 0 }
         type="button"
         value={ filter.value }
         data-testid="button-filter"

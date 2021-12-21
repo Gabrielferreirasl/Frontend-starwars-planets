@@ -19,9 +19,16 @@ function Table() {
   }, [data]);
 
   return (
-    <main className="flex flex-col space-y-10">
+    <main className="flex flex-col space-y-10 bg-slate-50">
       {tableInfo.infoIsLoaded && (
         <div>
+          <h1
+            className="text-center mt-10 font-sans
+            text-3xl italic font-bold tracking-wider underline
+          decoration-indigo-500 decoration-4"
+          >
+            Starwars Planets Search
+          </h1>
           <FilterForm />
           <RemoveBtn />
           <div className="table-info flex-col">
@@ -43,7 +50,8 @@ function Table() {
                   <tr key={ planet.orbital_period } className="border-b">
                     {Object.values(planet).map((value, index) => (
                       <td
-                        className="px-3 py-2 text-sm hover:bg-gray-300 font-medium text-gray-900 border-r"
+                        className="px-3 py-2 text-sm hover:bg-gray-300
+                         font-medium text-gray-900 border-r"
                         data-testid={ index === 0 && 'planet-name' }
                         key={ value }
                       >
