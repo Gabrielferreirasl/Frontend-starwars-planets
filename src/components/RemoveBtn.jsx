@@ -5,7 +5,7 @@ function RemoveBtn() {
   const { filters: { filterByNumericValues },
     removeComparisonFilter } = useContext(SWContext);
   return (
-    <div>
+    <div className="mt-10 mb-10">
       {filterByNumericValues.map((filter) => (
         <div key={ filter.column } data-testid="filter">
           <p>{`${filter.column} ${filter.comparison} ${filter.value}`}</p>
